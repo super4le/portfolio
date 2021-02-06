@@ -1,0 +1,120 @@
+/***************General****************/
+
+*{
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Yusei Magic', sans-serif;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.clearfix::after { /*****da copiare tutto se si vuole in ordine**/
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/*****************Header*****************/
+
+header{
+	background: #1b94b1;
+	text-align: center;
+}
+header .logo-container{
+	padding: 20px;
+}
+header img {
+	width: 160px;
+}
+
+
+/*****************Navigation*****************/
+
+
+nav {
+	background: #3366cc;
+	padding: 10px;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav li {
+	display: inline-block;
+}
+nav li a {
+	color: #ffffff;
+	display: inline-block;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+nav li:hover {
+	background-color: #1b94b1;
+}
+
+/****************Gallery****************/
+
+#gallery {
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+#gallery img {
+	width: 100%;
+}
+
+#gallery .item {
+  float: left;
+	width: 50%;
+	padding: 15px;
+}
+
+#gallery .caption {
+	background: #f0f0f0;
+	padding: 10px;
+}
+#gallery .caption p{
+	margin: 0;
+}
+
+/****************Footer****************/
+
+footer.main	{
+
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+	
+	/****************Gallery****************/
+
+	#gallery .item {
+	width: 33.3333%;
+}
+
+#gallery .item:nth-child(3n + 1) {
+	clear: left;
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+	
+}
+
+@media only screen and (max-width: 767px) {
+	
+#gallery .item:nth-child(3n + 1) {
+	clear: left;
+}
+}
