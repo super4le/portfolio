@@ -3,11 +3,17 @@
 *{
 	box-sizing: border-box;
 }
+html {
+	font-size: 62.5%;
+}
 body {
 	font-family: 'Yusei Magic', sans-serif;
+	font-size: 1.6rem;
 }
 a {
 	text-decoration: none;
+	font-size: 1.4rem;
+	color: #000000;
 }
 .container {
 	max-width: 900px;
@@ -20,6 +26,22 @@ a {
 	display: table;
 }
 
+.active {
+	background: #1b94b1;
+	border-radius: 3px;
+}
+
+img {
+	width: 100%;
+}
+
+.title {
+	font-size: 2.2rem;
+}
+
+main {
+	min-height: calc(100vh - 208.3px - 117.7px)
+}
 /*****************Header*****************/
 
 header{
@@ -30,7 +52,7 @@ header .logo-container{
 	padding: 20px;
 }
 header img {
-	width: 160px;
+	width: 120px;
 }
 
 
@@ -56,9 +78,7 @@ nav li a {
 	text-transform: uppercase;
 	text-decoration: none;
 }
-nav li:hover {
-	background-color: #1b94b1;
-}
+
 
 /****************Gallery****************/
 
@@ -81,17 +101,60 @@ nav li:hover {
 	background: #f0f0f0;
 	padding: 10px;
 }
+
 #gallery .caption p{
 	margin: 0;
 }
 
+#gallery .picture {
+	line-height: 0;
+}
+
+/****************About******************/
+
+#about img {
+	border-radius: 100%;
+	padding: 25px 0px;
+}
+/****************Contact****************/
+
+	#contact ul{
+		list-style-type: none;
+		padding: 0;
+	}
+
+	#contact li{
+		padding: 5px 0px;
+	}
+
+	#contact .materila-icons{
+		float: left;
+	}
+
+	#contact .contacts a{
+		margin: 3px 0 0 10px;
+		display: inline-block;
+	} 
+
 /****************Footer****************/
 
 footer.main	{
-
+	text-align: center;
+	padding: 15px;
 }
 
+footer.main img {
+	width: 24px;
+}
 
+footer.main a {
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+footer.main p {
+	font-size: 0.5rem;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -102,19 +165,70 @@ footer.main	{
 	width: 33.3333%;
 }
 
-#gallery .item:nth-child(3n + 1) {
+	#gallery .item:nth-child(3n + 1) {
 	clear: left;
 }
+/****************About****************/
+
+	#about img{
+		width: 70%;
+	}
+	#about .profile-pic {
+	width: 50%;
+	float: left;
+	padding: 15px;
+	text-align: center;
+}
+
+	#about .description{
+		float: right;
+		width: 50%;
+		padding: 30px 15px 15px;
+}
+
+/****************Contacts****************/
+
+#contact .info, #contact .contacts {
+	width: 50%;
+	padding: 15px;
+}
+
+#contact .info{
+	float: left;
+	width: 70%;
+}
+#contact .contacts{
+	float: right;
+	width: 30%;
+}
+
 
 }
 
 @media only screen and (min-width: 992px) {
 	
+nav li a {
+	transition: background .3s;
+}
+
+nav li a:hover {
+	background: #1b94b1;
+	border-radius: 3px;
+}
+
+#gallery .item {
+	transition: opacity .3s;
+}
+
+#gallery .item:hover {
+	opacity: .7;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
 	
-#gallery .item:nth-child(3n + 1) {
+#gallery .item:nth-child(2n + 1) {
 	clear: left;
 }
 }
