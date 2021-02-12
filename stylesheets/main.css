@@ -39,14 +39,19 @@ img {
 	font-size: 2.2rem;
 }
 
-main {
-	min-height: calc(100vh - 208.3px - 117.7px)
+main {/*con questa operazione facciamo si che footer rimane sempre al suo posto, anche se pagina è vuota il footer comunque rimane giu*/
+	min-height: calc(100vh - 208.3px - 117.517px) /*tot l'altezza del main - header(content+padding) - footer(content+padding)*/
+	padding-top: 208.3px;
 }
 /*****************Header*****************/
 
 header{
 	background: #1b94b1;
 	text-align: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
 header .logo-container{
 	padding: 20px;
@@ -95,6 +100,7 @@ nav li a {
   float: left;
 	width: 50%;
 	padding: 15px;
+	position: relative;
 }
 
 #gallery .caption {
@@ -109,6 +115,14 @@ nav li a {
 #gallery .picture {
 	line-height: 0;
 }
+
+#gallery .caption img {
+	width: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 
 /****************About******************/
 
